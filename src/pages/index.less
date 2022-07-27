@@ -1,0 +1,26 @@
+canvas {
+  // width: 800px;
+  // height: 500px !important;
+  background-color: #e1e1e1;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .threeContainer {
+    overflow: auto;
+  }
+  & > .ant-radio-group + div {
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    flex-grow: 1;
+  }
+}
+
+.image {
+  // width: 0;
+  // height: 0;
+}
