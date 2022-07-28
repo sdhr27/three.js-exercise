@@ -17,6 +17,7 @@ export default function () {
     color: 0x0000ff
   }); //材质对象Material
   var mesh = new THREE.Mesh(geometry, material); //网格模型对象Mesh
+  mesh.name = "Box"; //网格模型1命名
   scene.add(mesh); //网格模型添加到场景中
   group.add(mesh);
   scene.add(group);
@@ -32,7 +33,7 @@ export default function () {
   // 创建颜色关键帧对象：10时刻对应颜色1, 0, 0   20时刻对应颜色0, 0, 1
   var colorKF = new THREE.KeyframeTrack('Box.material.color', [10, 20], [1, 0, 0, 0, 0, 1]);
   // 创建名为Sphere对象的关键帧数据  从0~20时间段，尺寸scale缩放3倍
-  var scaleTrack = new THREE.KeyframeTrack('Sphere.scale', [0, 20], [1, 1, 1, 3, 3, 3]);
+  var scaleTrack = new THREE.KeyframeTrack('Box.scale', [0, 20], [1, 1, 1, 3, 3, 3]);
 
   // duration决定了默认的播放时间，一般取所有帧动画的最大时间
   // duration偏小，帧动画数据无法播放完，偏大，播放完帧动画会继续空播放
